@@ -37,12 +37,19 @@
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/4a1cec47-f70c-4f30-bb97-5aded8e27194)
 
 **so here It seems there might be a potential SQL injection (SQLi) vulnerability, as the username appears to go directly into the database without proper validation or the use of parameterized queries. This lack of input sanitization could be an entry point for exploiting SQL injection.**
+
 **but It appears there's an additional layer of complexity in the authentication process. After taking your password, it's hashed and subjected to certain operations. The resulting hash is then compared with the stored password from the database and a static value. This adds a challenge to exploiting a straightforward SQL injection, as the hashed and manipulated password needs to match the expected values for successful authentication.**
+
 **but i noticed smth that he cast the returend password from the database as int and compare it with $mysupersecurehash which is a string and then compare agin the mysupersecurehash with another integer value**
-**here i start thinking of type juglling (magic hash) which is when comparing string hashes to integers. If a string hash starts with "0e" followed by only numbers, PHP interprets this as scientific notation and the hash is treated as a float in comparison operations. for more info look here -> https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Type%20Juggling/README.md**
+
+**here i start thinking of type juglling (magic hash) which is when comparing string hashes to integers. If a string hash starts with "0e" followed by only numbers, PHP interprets this as 
+scientific notation and the hash is treated as a float in comparison operations. for more info look here -> 
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Type%20Juggling/README.md**
 
 **So, I began contemplating how to structure my input so that, after being hashed and subjected to operations, it starts with "0e" followed by numeric values.**
+
 **The only solution that came to mind was to resort to a brute-force approach.**
+
 **So, I sought assistance from a friend, and together we created a Python script to iterate and obtain the desired value.**
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/0c1debf7-515c-4c73-8364-7b76d782b224)
@@ -52,7 +59,10 @@
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/d69a663a-7263-4dd7-ad24-04ec3ae6adce)
 
 **After obtaining the numeric value, I revisited the main page and inputted the username as 'admin' OR 1=1 -- - and the password as the obtained numeric value, which was 355933.**
+
 **And pingo we got the flag :D**
+
+
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/f236d4ff-17eb-4270-bfbe-8e625fbc0464)
 
