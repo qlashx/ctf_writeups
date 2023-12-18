@@ -6,7 +6,7 @@
 
 **after reading the description i notice that we have to know a secret and use it change our role to NineTails but what secert that we need to know**
 
-**after logining in using the provide crids**
+**after logining in using the provide credentials**
 
 **I saw to links like this**
 
@@ -37,9 +37,9 @@
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/a337121e-3730-4c02-857a-2b5f24e21fa4)
 
 **After this i used this python code to get generate a new jwt token**
-`import jwt
-  encoded_jwt = jwt.encode({  "username": "Naruto","role": "NineTails"}, "minato", algorithm="HS256")
-  print(encoded_jwt)
+
+![image](https://github.com/qlashx/ctf_writeups/assets/106611511/631ecf90-4138-4972-a3ad-af0e4e16d767)
+
 `
 **And it gave me this token ->eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hcnV0byIsInJvbGUiOiJOaW5lVGFpbHMifQ.rDZ26ZE_F4l0Ve4E-2sKP4qKNuadhLU8nrThW7YGVPg**
 
