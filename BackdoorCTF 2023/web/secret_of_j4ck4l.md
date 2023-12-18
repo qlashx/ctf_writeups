@@ -33,9 +33,9 @@
 
 **And pass it to function called useless we will look at it later on**
 
-**And then take the returned value from the useless and reasgin it to file_param**
+**And then take the returned value from the useless and reassign it to file_param**
 
-**And after it use os.path.join (built in fucntion) and add the base_directory varibale to our file_param**
+**And then it use os.path.join (built in fucntion) and add the base_directory varibale to our file_param**
 
 **And then try to open this file and read its content and return it as response**
 
