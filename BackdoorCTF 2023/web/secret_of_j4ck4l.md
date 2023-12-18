@@ -3,9 +3,10 @@
 # challenge link -> http://34.132.132.69:8003/
 
 **This is the main page in the given website**
+
 **It's nothing out of the ordinary, but if you check the URL, you'll notice a "file" parameter in the GET request, indicating a possible link to an LFI or LFD vulnerability.** 
 
-![image](https://github.com/qlashx/ctf_writeups/assets/106611511/30a10673-b193-47fa-b7f5-953c77a80b73)
+![image](https://github.com/qlashx/ctf_writeups/assets/106611511/e6916b1b-8830-444d-8e3b-2431aeb1d30f)
 
 **But lets first examin the sorce code**
 
