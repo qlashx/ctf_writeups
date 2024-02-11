@@ -9,19 +9,19 @@
 **this is a very basic login page so lets try to login with admi/admin and see what will happen**
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/f2bdebfc-7460-4a97-86c0-3f59b5583ada)
-**as i was expecting never trust the description**
+**As i was expecting never trust the description**
 
-**so lets take a look at the provided source code**
+**So lets take a look at the provided source code**
 
-**we was having two main files app.py and index.php**
+**We was having two main files app.py and index.php.**
 
-**but there was an intersting file calleed init.db which was creating an db and inserting only admin as a username and password**
+**There was an interesting file named "init.db" that was creating a database and inserting only "admin" as both the username and password.**
 
-**so now we now we have only admin in the db and we need login with it but when we tried it it give us the upper text response**
+**So, now that we only have "admin" in the database and we attempted to log in with it, we received the aforementioned response.**
 
-**so lets take a look at the index.php**
+**Let's examine the "index.php" file to understand how the login functionality is implemented and why it might be returning the upper response**
 
-**the index.php was consisting of 3 main functions**
+**The index.php consisted of three main functions.**
 
 **1- Check_Admi**
 
@@ -34,23 +34,23 @@
 **3- post request handeler**
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/f739198b-843d-48df-8f0a-866d4334caae)
-**so lets know undesrtand how the code work**
+**so lets now  undesrtand how the code work**
 
-**first it take on the data that is comming from the post request and save it in the username and passsword and then send the username to check admin function and get the ip of the sender of the request and compare it to the localhost ip**
+**The first function receives the data from the POST request and saves it in variables for username and password. It then passes the username to a function called "check_admin" and retrieves the IP address of the sender of the request, comparing it to the localhost IP**
 
-**so lets examin the check-admin fucntion**
+**Let's examine the "check_admin" function to understand its implementation and how it interacts with the login process.**
 
-**it is a normal regex that will match admin word if beining inserted weather in small or capital form**
+**The "check_admin" function appears to be a regular expression that matches the word "admin" regardless of its case (whether in lowercase or uppercase).**
 
-**here i thought i could bypass the regex and can insert admin but depending on hacktricks i couldnt bypass this regex with smth like \n so i started looking in another way**
+**So, since attempts to bypass the regex filter using techniques like inserting newline characters (\n) were unsuccessful,so i strated exploring alternative approaches.**
 
-**Then i searched alot to force the server to send that the orginating ip is 127.0.0.1 to php but i cannt also (i used 403 header bypass but it didnt work :( )**
+** The other approache was that  i extensively researched methods to manipulate the server into indicating that the originating IP is 127.0.0.1 to PHP, but despite attempting a 403 header bypass, I was unsuccessful. :( )**
 
-**after a while of testing and trying to send payloads like douple url encoding i notice an important thing that the data when it get to the api when i send it like douple url encoding it make only a single url encode and acording to my knwoladge it was strange bc the server take the data at first and then decode it (first url decode) and then php check on the data and it will bypass and send it to the api and when the api get the data it will decode it once again so why there is an only one url encode happens**
+**After some testing and attempts to send payloads such as double URL encoding, I noticed a significant detail: when the data reaches the application and I send it with double URL encoding, it only undergoes a single URL encoding process. This seemed strange to me because, as far as I understand, the server initially receives the data and then decodes it (first URL decode). Following this, PHP checks the data, allowing it to bypass and sending it to the API. Finally, when the API receives the data, it decodes it once again. Hence, I found it puzzling why only one URL encoding process occurs.**
 
-**it turned of that php in the post request handeler it dosent send the encoded data but it send the row request agin to the api and here is the vuln that we can use http parameter pullition to get admin acceses but why**
+**It appears that in the PHP post request handler, encoded data isn't sent, but rather the raw request is sent again to the API. This reveals a vulnerability wherein we can utilize HTTP parameter pollution to gain admin access. However, the reason behind this vulnerability isn't immediately clear. but why i will try HTTP parameter pollution**
 
-**bc in php when it see two parameters witht the same name it take the second but in python it take the first so wen could send a request like this -> username=admin&username=qlashx&password=admin -> and this will work bc php will validate on qlashx as username and send all of the request data agin to api and api is working python will get the first username which was admin**
+**bc In PHP, when encountering two parameters with the same name, it prioritizes the second parameter. However, in Python, it prioritizes the first. Hence, we can exploit this by sending a request like this: "username=admin&username=qlashx&password=admin". PHP will validate "qlashx" as the username and resend all the request data to the API. Python, on the other hand, will receive the first username, which is "admin"**
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/66b8377c-dea6-4f3a-8b98-3efed6ee1335)
 
