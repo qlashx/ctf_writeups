@@ -1,6 +1,6 @@
 ## Description:
 **Welcome to the LA CTF 2024! Your task is simple: Accept the terms and conditions, and you'll receive a flag!**
-### Walkthrough:
+## Walkthrough:
 **Depending on the description lets access the website and accept the conditions :D**
 
 **The main page was like this and i cannot click on the accept button (it use js and play with it)**
