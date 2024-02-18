@@ -1,4 +1,4 @@
-###description -> Welcome to LA CTF 2024! All you have to do is accept the terms and conditions and you get a flag!
+###Description -> Welcome to LA CTF 2024! All you have to do is accept the terms and conditions and you get a flag!
 -------------------------------------------------------------------------------------------------------------------
 **upon the description lets access the website and accept the conditions :D**
 
