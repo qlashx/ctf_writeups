@@ -33,7 +33,7 @@
 
 **So, I considered a different approach by attempting to fix the SQL query directly instead of commenting out portions of it. However, I encountered difficulties due to the size limitation, especially when using operators like the LIKE operator.**
 
-**But finally i used made this payload ```'UNION+SELECT+1,2,3,4,5,*+FROM+flag+where+'a'='a``` to get the flag lets understand it**
+**But finally i made this payload ```'UNION+SELECT+1,2,3,4,5,*+FROM+flag+where+'a'='a``` to get the flag lets understand it**
 
 **At first, I used a single quote ' to close the open quote, and the UNION operator to execute another query. The selection of 1,2,3,4,5 was necessary because the first query returned 6 rows, and to make the UNION operation work, the two queries must return the same number of columns. Then, I selected the table called 'flag,' and the condition in the 'WHERE' clause was set to 'a'='a to ensure it always evaluates to true+to make the sql query dosent make error (there is a ' that we used to make comment to make the sql work)****
 
