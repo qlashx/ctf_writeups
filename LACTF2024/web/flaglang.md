@@ -10,3 +10,4 @@
 **It contained many flags, but there was an interesting one called Flagistan. Let's access it from the browser.**
 **After attempting to access it, the message on the flag was the flag itself. :D**
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/7f79acdc-02bd-4de9-85a7-54bdfcabc34e)
+```lactf{n0rw3g7an_y4m7_f4ns_7n_sh4mbl3s}```
