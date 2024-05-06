@@ -1,4 +1,4 @@
-![image](https://github.com/qlashx/ctf_writeups/assets/106611511/076a4997-1f19-4473-b64f-580cc4d79624)# Description:
+# Description:
 **I'd rather die than use a password manager. In other news, can anyone help me remember the login info for my account?**
 
 **There was a source code provided with the chall**
