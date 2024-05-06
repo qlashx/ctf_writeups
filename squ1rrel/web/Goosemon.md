@@ -5,12 +5,15 @@
 
 # Walkthrough:
 **First, let's access the main page of the website.**
+
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/035fb34f-cbfd-47fa-9241-e4442dce4140)
 
 **lets look at the sign in page**
+
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/e91f5753-8bd2-483c-8517-f9f91f42a171)
 
 **Now lets look at the code to get better understanding of the web app**
+
 **in the provided folder we have two importand files firs index.js and second startup.js lets take a look deeper in them**
 
 
@@ -20,9 +23,11 @@
 
 
 **index.js**
-**it is a normal application writen with nodejs and used express as a framework**
-**But in the login i notice that there is a vuln with how the code take the data from the user here**
 ![image](https://github.com/qlashx/ctf_writeups/assets/106611511/855df51e-bc48-4694-be73-b086a5a76baf)
+
+**it is a normal application writen with nodejs and used express as a framework**
+
+**But in the login i notice that there is a vuln with how the code take the data from the user here**
 
 **the developer take the input from the user and pass it fillter function lets see what dose this function do**
 
