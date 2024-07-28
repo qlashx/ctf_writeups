@@ -16,7 +16,7 @@
   
   **so if we take a look at the substitutions array will see a key (; ) which mean ; and space after it and str_replace will search for the exact string so what about inserting (;) only the code will not fillter it**
 
-  **it do the same for the (/ ) which mean that we can use the same bypass by inserting only /**
+  **it do the same for the (/ ) which means that we can use the same bypass by inserting only /**
 
   **note even if you insert the space after the / or ; it will get matched by the first key in the array and get deleted so .........**
 
