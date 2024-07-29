@@ -6,7 +6,7 @@
 
   ![image](https://github.com/user-attachments/assets/85e83dc8-d548-4995-a31f-0802ea61b76e)
 
-  **upper code is the bing.php hmmmmm so our goal is to bypass the validations and be able to execute commands on the server right? (os command injection) but how ?**
+  **this is  bing.php hmmmmm so our goal is to bypass the validations and be able to execute commands on the server right? (os command injection) but how ?**
   
   **first is that str_replace search for the string and remove all of the occurrence of it in the input but it does not make a back track after the remove operation**
   
