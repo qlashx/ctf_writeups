@@ -3,7 +3,7 @@
 
   ![image](https://github.com/user-attachments/assets/f9717d91-d817-4ab9-b444-be24f6ba98d7)
 
-  **upper is the app.py**
+  **This is the app.py**
 
   **as we can see there is no validation or sanitizaion so we can execute code as we want but we cannont see the output of it**
 
