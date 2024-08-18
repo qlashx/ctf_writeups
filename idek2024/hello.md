@@ -26,10 +26,10 @@
   ![image](https://github.com/user-attachments/assets/b0ad6b6d-cf28-4f41-9bf4-313659f4ac4c)
 
   **so how we can use phpinfo to get the bot cookie?**
+  ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/fbce6706-e779-43e4-be72-60b4c27ef1cd)
 
   **when a user vist the phpinfo page it reflect its cookie in response even the HttpOnly ones like this**
 
-    ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/c5908acf-fff5-4eca-8d2d-876ac408c5f6)
 
 
   **so now we can make the bot visit the info.php page then take the response and send it to our server right ? no it will not work bc the nginx.conf lets look at it**
