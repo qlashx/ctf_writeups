@@ -2,7 +2,7 @@
   Just to warm you up for the next Fight :"D
 ## Walkthrough:
   **The challenge was provided with a src code**
-  **the src code is made of 4 main files 
+  **the src code is made of 4 main files**
   **1- index.php**
   **2- info.php**
   **3- bot.js**
