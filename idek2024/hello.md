@@ -8,7 +8,7 @@
   3- bot.js
   4- nginx.conf**
 
-  **Flag is in the bot.js cookie with a httponly attr this mean that JS cannot access the cookie**
+  **Flag is in the bot.js cookie with a httponly attribute this mean that JS cannot access the cookie**
 
   **1-index.php**
   ![image](https://github.com/user-attachments/assets/7d144810-397a-4ae2-91f0-b63c47938092)
@@ -17,23 +17,26 @@
 
   **the main problem is in the Enhanced_Trim function that replace the defined char set with "" so how to bypass it to make an alert?**
 
-  **at first i looked for alternaives for the space and found that %0C can work so the payload to make a simple alert -> <img%0Csrc=x%0Conerror=alert``>**
+  **at first i looked for alternatives for the space and found that %0C can work so the payload to make a simple alert -> <img%0Csrc=x%0Conerror=alert``>**
 
-  **but this dosenot have any value since we cannot use JS to steal the cookie bc the httponly attr on the cookie**
+  **but this dosenot have any value since we cannot use JS to steal the cookie bc the httponly attribute on the cookie**
 
-  **the solution was in the info.php that view the  phpinfo**
+  **the solution was in the info.php that view the phpinfo**
 
   ![image](https://github.com/user-attachments/assets/b0ad6b6d-cf28-4f41-9bf4-313659f4ac4c)
 
   **so how we can use phpinfo to get the bot cookie?**
 
-  **when a user vist the phpinfo page it reflect its cookie in response**
+  **when a user vist the phpinfo page it reflect its cookie in response even the HttpOnly ones like this**
+
+    ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/c5908acf-fff5-4eca-8d2d-876ac408c5f6)
+
 
   **so now we can make the bot visit the info.php page then take the response and send it to our server right ? no it will not work bc the nginx.conf lets look at it**
 
   ![image](https://github.com/user-attachments/assets/e8283328-e2fa-4412-947c-aa0eddddba59)
 
-  **so in the nginx.conf say that the info.php is only accessible from the localhost (the bot dosent see the localhost of the challange so it cannot access it)**
+  **so in the nginx.conf it says that the info.php is only accessible from the localhost (the bot dosent see the localhost of the challange so it cannot access it)**
 
   **that soloution was in the last part of the configuration that include and run any file endwith .php so we can it to access the info.php right ?**
 
