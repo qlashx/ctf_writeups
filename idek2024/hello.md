@@ -33,7 +33,7 @@
   ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/fbce6706-e779-43e4-be72-60b4c27ef1cd)
 
 
-  **so now we can make the bot visit the info.php page then take the response and send it to our server right? wrong, this will not work because of nginx.conf lets look at it**
+  **so now we can make the bot visit the info.php page then take the response and send it to our server right? wrong, this will not work because of nginx.conf lets take a look at it**
 
   ![image](https://github.com/user-attachments/assets/e8283328-e2fa-4412-947c-aa0eddddba59)
 
