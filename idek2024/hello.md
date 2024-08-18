@@ -11,6 +11,7 @@
   **Flag is in the bot.js cookie with a httponly attribute this mean that JS cannot access the cookie**
 
   **1-index.php**
+  
   ![image](https://github.com/user-attachments/assets/7d144810-397a-4ae2-91f0-b63c47938092)
 
   **so it is clear that we can get xss from the name get parameter but how ?**
@@ -26,10 +27,10 @@
   ![image](https://github.com/user-attachments/assets/b0ad6b6d-cf28-4f41-9bf4-313659f4ac4c)
 
   **so how we can use phpinfo to get the bot cookie?**
+  
   ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/fbce6706-e779-43e4-be72-60b4c27ef1cd)
 
   **when a user vist the phpinfo page it reflect its cookie in response even the HttpOnly ones like this**
-
 
 
   **so now we can make the bot visit the info.php page then take the response and send it to our server right ? no it will not work bc the nginx.conf lets look at it**
