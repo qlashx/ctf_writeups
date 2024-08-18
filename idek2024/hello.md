@@ -3,9 +3,13 @@
 ## Walkthrough:
   **The challenge was provided with a src code**
   **the src code is made of 4 main files**
+  
   **1- index.php**
+  
   **2- info.php**
+  
   **3- bot.js**
+  
   **4- nginx.conf**
 
   **The flag is in the bot.js cookie with a httponly attribute this means that JS cannot access the cookie**
