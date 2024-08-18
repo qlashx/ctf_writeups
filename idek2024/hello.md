@@ -30,7 +30,7 @@
   
   **when a user vist the phpinfo page it reflect its cookie in response even the HttpOnly ones like this**
 
-    ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/fbce6706-e779-43e4-be72-60b4c27ef1cd)
+  ![phpinfo-dvwa-1](https://github.com/user-attachments/assets/fbce6706-e779-43e4-be72-60b4c27ef1cd)
 
 
   **so now we can make the bot visit the info.php page then take the response and send it to our server right ? no it will not work bc the nginx.conf lets look at it**
