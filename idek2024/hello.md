@@ -39,7 +39,7 @@
 
   **so in the nginx.conf it says that the info.php is only accessible from the localhost (the bot doesnt see the localhost of the challange so it cannot access it)**
 
-  **that solution was in the last part of the configuration that includes and runs any file endwith .php so we can it to access the info.php right?**
+  **the solution was in the last part of the configuration that includes and runs any file that ends with .php so we can use it to access the info.php right?**
 
   **I found this on hacktricks that allowed me to bypass the validation and access the info.php (https://book.hacktricks.xyz/pentesting-web/proxy-waf-protections-bypass#php-fpm)**
 
